@@ -20,8 +20,8 @@ namespace OOP_Ingatlanok
         { get => arEzerFt;
             set => arEzerFt = value < 10 ? 10 : value;
         }
-        public int OsszesRegisztraltIngatlan { get => osszesRegisztraltIngatlan; }
-        public Ingatlan(string azonosito, string cim, string kategoria, int alapteruletM2) : this(azonosito, cim, kategoria, alapteruletM2, alapteruletM2 * 500000)
+        public static int OsszesRegisztraltIngatlan { get => osszesRegisztraltIngatlan; }
+        public Ingatlan(string azonosito, string cim, string kategoria, int alapteruletM2) : this(azonosito, cim, kategoria, alapteruletM2, alapteruletM2 * 500)
         {
             
         }
@@ -36,7 +36,7 @@ namespace OOP_Ingatlanok
         }
         public override string ToString()
         {
-            return $"[{Azonosito}] {Cim} ({Kategoria}) - Terület: {ArEzerFt} m2 | Ár: {AlapteruletM2} ezer Ft";
+            return $"[{Azonosito}] {Cim} ({Kategoria}) - Terület: {AlapteruletM2} m2 | Ár: {ArEzerFt} ezer Ft";
         }
         public double NegyzetmeterAr()
         {
@@ -44,9 +44,9 @@ namespace OOP_Ingatlanok
         }
         //public bool KategoriaEgyezik(string keresettKategoria)
         //{
-        //    if (keresettKategoria.ToUpper = Kategoria.ToUpper)
+        //    if (keresettKategoria.ToUpper == Kategoria.ToUpper)
         //    {
-
+        //        return 
         //    }
         //}
     }
